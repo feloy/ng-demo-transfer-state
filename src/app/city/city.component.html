@@ -1,0 +1,8 @@
+<main>
+  <h1>
+    {{(weather|async).name}}
+  </h1>
+  <p>Temp: {{(weather|async).main.temp}} °C</p>
+  <p>Pressure: {{(weather|async).main.pressure}} hPa</p>
+  <p>Humidity: {{(weather|async).main.humidity}} %</p>
+</main>

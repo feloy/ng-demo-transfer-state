@@ -18,5 +18,7 @@ if (process.argv.length != 3) {
 
 const args = process.argv.slice(2);
 
+require('@angular/core').enableProdMode();
+
 // Render to HTML and log it to the console.
 renderModuleFactory(AppServerModuleNgFactory, {document: index, url: args[0]}).then(html => console.log(html));
