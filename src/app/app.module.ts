@@ -1,5 +1,5 @@
 import { CityComponent } from './city/city.component';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -18,6 +18,7 @@ import { CityWeatherResolverService } from './city-weather-resolver.service';
     BrowserAnimationsModule,
     MyMaterialModule,
     HttpClientModule,
+    BrowserTransferStateModule,
     RouterModule.forRoot([
       {
         path: ':city', component: CityComponent, resolve: { weather: CityWeatherResolverService }
